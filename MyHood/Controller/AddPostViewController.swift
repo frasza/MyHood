@@ -29,7 +29,10 @@ class AddPostViewController: UIViewController {
   }
   
   @IBAction func makePostButtonPressed(_ sender: UIButton) {
-    
+    guard let title = titleTextField.text, let desc = descriptionTextField.text, let img = postImage.image else { return }
+    let post = Post(imagePath: "", title: title, postDesc: desc)
+    Service.instance.addPost(post: post)
+    dismiss(animated: true, completion: nil)
   }
   
   @IBAction func cancelButtonPressed(_ sender: UIButton) {
