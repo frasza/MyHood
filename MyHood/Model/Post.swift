@@ -10,9 +10,9 @@ import Foundation
 
 class Post {
   
-  fileprivate var imagePath: String
-  fileprivate var title: String
-  fileprivate var postDesc: String
+  public private(set) var imagePath: String
+  public private(set) var title: String
+  public private(set) var postDesc: String
   
   init(imagePath: String, title: String, postDesc: String) {
     self.imagePath = imagePath
