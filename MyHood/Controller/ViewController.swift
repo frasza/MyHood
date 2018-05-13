@@ -14,7 +14,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    Service.instance.loadPosts()
     NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onPostsLoaded), name: NSNotification.Name("postsLoaded"), object: nil)
   }
   
